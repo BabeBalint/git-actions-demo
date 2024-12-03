@@ -11,9 +11,14 @@ public class Calculator {
         return a * b;
     }
 
-    // Ez a metódus külső szolgáltatást használ (pl. adatbázis vagy API)
     public boolean isResultStored(int result) {
-        // Valós alkalmazásban itt történne a külső szolgáltatás hívása
         return result >= 0;
+    }
+
+    public int divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return a / b;
     }
 }
